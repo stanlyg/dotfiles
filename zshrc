@@ -9,7 +9,7 @@ ZSH=$HOME/.oh-my-zsh
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
 #ZSH_THEME="xiong-chiamiov-plus"
-ZSH_THEME="steeef"
+ZSH_THEME="mortalscumbag"
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
