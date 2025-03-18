@@ -36,10 +36,10 @@ popd
 
 Optional
 --------
-To install zsh and oh-my-zsh:
+To install zsh and zimfw:
 ``` bash
 pushd ~/dotfiles
 ./install_zsh.sh
 popd
 ```
-
+(zimfw is installed because of commands within the .zshrc file)
