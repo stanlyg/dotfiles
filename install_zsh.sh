@@ -29,4 +29,7 @@ else
     echo "Please install zsh, then re-run this script!"
     exit
   fi
+  echo "You probably want to change your default shell to zsh, otherwise you can run zsh when you want to use it."
+  echo "chsh --shell /bin/zsh username"
 fi
+
