@@ -28,7 +28,17 @@ Installation
 ------------
 
 ``` bash
-git clone git@bitbucket.org:stan_goodman/dotfiles.git ~/dotfiles
-cd ~/dotfiles
+git clone https://github.com/stanlyg/dotfiles.git ~/dotfiles
+pushd ~/dotfiles
 ./makesymlinks.sh
+popd
 ```
+
+Optional
+--------
+To install zsh and oh-my-zsh:
+pushd ~/dotfiles
+./install_zsh.sh
+popd
+```
+
