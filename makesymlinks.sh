@@ -24,9 +24,25 @@ echo "done"
 
 # move any existing dotfiles in homedir to dotfiles_old directory, then create symlinks from the homedir to any files in the ~/dotfiles directory specified in $files
 for file in $files; do
-    echo "Moving any existing dotfiles from ~ to $olddir"
-    mv -v ~/.$file ~/dotfiles_old/
-    echo "Creating symlink to $file in home directory."
-    ln -s $dir/$file ~/.$file
-done
+  number=0
+  if [ -L ~/.$file ] ; then
+    fname=".$file"
+    while [ -e ~/dotfiles_old/$fname ]; do
+      printf -v fname '%s-%d' ".$file" "$(( ++number ))"
+    done
+    echo -n "Copying "
+    cp -Lrv ~/.$file ~/dotfiles_old/$fname
+    rm -v ~/.$file
 
+  elif [ -f ~/.$file -o -d ~/.$file ]; then
+    fname=".$file"
+    while [ -e ~/dotfiles_old/$fname ]; do
+      printf -v fname '%s-%d' ".$file" "$(( ++number ))"
+    done
+    mv -v ~/.$file ~/dotfiles_old/$fname
+  #fi
+  fi
+  echo -n "Linking "
+  ln -vs $dir/$file ~/.$file
+  echo "-------"
+done
