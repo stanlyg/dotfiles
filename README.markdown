@@ -37,6 +37,7 @@ popd
 Optional
 --------
 To install zsh and oh-my-zsh:
+``` bash
 pushd ~/dotfiles
 ./install_zsh.sh
 popd
