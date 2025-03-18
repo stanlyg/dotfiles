@@ -36,7 +36,3 @@ export CLICOLOR=1
 # Set "ls" colors
 export LSCOLORS=Gxfxcxdxbxegedabagacad
 
-# Launch Zsh
-if [ -t 1 ]; then 
-  exec zsh
-fi
